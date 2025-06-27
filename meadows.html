@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Meadows - HELP Project" />
+        <meta name="author" content="" />
+        <title>Meadows - HELP</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* Custom hover dropdown styles */
+            .navbar-nav .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+            
+            .navbar-nav .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.6);
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                min-width: 200px;
+                padding: 0;
+                margin-top: 0;
+            }
+            
+            .navbar-nav .dropdown-item {
+                color: #fff;
+                padding: 12px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                transition: all 0.3s ease;
+                font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                font-size: 0.7rem;
+                font-weight: 700;
+                text-transform: none;
+                letter-spacing: 0.0625em;
+            }
+            
+            .navbar-nav .dropdown-item:last-child {
+                border-bottom: none;
+            }
+            
+            .navbar-nav .dropdown-item:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                padding-left: 25px;
+            }
+            
+            .navbar-nav .dropdown-toggle::after {
+                display: none;
+            }
+            
+            .navbar-nav .nav-link.dropdown-toggle {
+                position: relative;
+            }
+            
+            .navbar-nav .nav-link.dropdown-toggle:after {
+                content: "▼";
+                font-size: 0.7em;
+                margin-left: 5px;
+                transition: transform 0.3s ease;
+            }
+            
+            .navbar-nav .dropdown:hover .nav-link.dropdown-toggle:after {
+                transform: rotate(180deg);
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">HELP</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#partners">Partners</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="caldor-fire-recovery.html">Caldor Fire Recovery</a></li>
+                                <li><a class="dropdown-item" href="crystal-basin.html">Crystal Basin</a></li>
+                                <li><a class="dropdown-item" href="meadows.html">Meadows</a></li>
+                                <li><a class="dropdown-item" href="watershed-outcomes-bank.html">Watershed Outcomes Bank</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="documentsDropdown">
+                                Documents
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="documents.html#charter">Charter</a></li>
+                                <li><a class="dropdown-item" href="documents.html#metrics-proposal">Metrics Proposal</a></li>
+                                <li><a class="dropdown-item" href="documents.html#history">History</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">MEADOWS</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Restoring and protecting meadow ecosystems across the Eldorado National Forest through the Healthy Eldorado Landscape Partnership.</p>
+                        <a class="btn btn-primary btn-xl" href="#project-details">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Project Details-->
+        <section class="page-section bg-primary" id="project-details">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Project Overview</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">Meadows are critical ecosystems within the Sierra Nevada that provide essential habitat for wildlife, store groundwater, and support biodiversity. The HELP Meadows project focuses on restoring degraded meadow systems and protecting healthy ones to ensure their ecological function for future generations.</p>
+                        <div class="row gx-4 gx-lg-5 mt-5">
+                            <div class="col-lg-6 mb-4">
+                                <h4 class="text-white">Restoration Activities</h4>
+                                <p class="text-white-75">Repairing damaged meadow hydrology, removing invasive species, and restoring native plant communities.</p>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <h4 class="text-white">Conservation</h4>
+                                <p class="text-white-75">Protecting existing healthy meadows through strategic management and monitoring programs.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light btn-xl" href="index.html#contact">Get Involved</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Goals-->
+        <section class="page-section" id="goals">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">Restoration Goals</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-flower1 fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Native Plant Communities</h3>
+                            <p class="text-muted mb-0">Restoring diverse native plant species that support meadow ecosystem health and function.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-droplet-half fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Hydrologic Function</h3>
+                            <p class="text-muted mb-0">Repairing damaged streams and groundwater systems to restore natural water cycles.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-binoculars fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Wildlife Habitat</h3>
+                            <p class="text-muted mb-0">Creating and maintaining habitat for birds, amphibians, and other meadow-dependent species.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-thermometer-sun fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Climate Resilience</h3>
+                            <p class="text-muted mb-0">Building meadow resilience to climate change and extreme weather events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Healthy Eldorado Landscape Partnership</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

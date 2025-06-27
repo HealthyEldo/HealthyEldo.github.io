@@ -17,18 +17,134 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* Custom hover dropdown styles */
+            .navbar-nav .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+            
+            .navbar-nav .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.6);
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                min-width: 200px;
+                padding: 0;
+                margin-top: 0;
+            }
+            
+            .navbar-nav .dropdown-item {
+                color: #fff;
+                padding: 12px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                transition: all 0.3s ease;
+                font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                font-size: 0.7rem;
+                font-weight: 700;
+                text-transform: none;
+                letter-spacing: 0.0625em;
+            }
+            
+            .navbar-nav .dropdown-item:last-child {
+                border-bottom: none;
+            }
+            
+            .navbar-nav .dropdown-item:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                padding-left: 25px;
+            }
+            
+            .navbar-nav .dropdown-toggle::after {
+                display: none;
+            }
+            
+            .navbar-nav .nav-link.dropdown-toggle {
+                position: relative;
+            }
+            
+            .navbar-nav .nav-link.dropdown-toggle:after {
+                content: "▼";
+                font-size: 0.7em;
+                margin-left: 5px;
+                transition: transform 0.3s ease;
+            }
+            
+            .navbar-nav .dropdown:hover .nav-link.dropdown-toggle:after {
+                transform: rotate(180deg);
+            }
+            
+            /* Partner logo styles */
+            .partner-logo {
+                max-height: 80px;
+                max-width: 150px;
+                object-fit: contain;
+                transition: transform 0.3s ease;
+            }
+            
+            .partner-logo:hover {
+                transform: scale(1.1);
+            }
+            
+            /* Partner logo display styles for Partners section */
+            .partner-container {
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 120px;
+            }
+            
+            .partner-logo-display {
+                max-height: 100px;
+                max-width: 200px;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                filter: grayscale(20%);
+            }
+            
+            .partner-logo-display:hover {
+                transform: scale(1.05);
+                filter: grayscale(0%);
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top">HELP</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="caldor-fire-recovery.html">Caldor Fire Recovery</a></li>
+                                <li><a class="dropdown-item" href="crystal-basin.html">Crystal Basin</a></li>
+                                <li><a class="dropdown-item" href="meadows.html">Meadows</a></li>
+                                <li><a class="dropdown-item" href="watershed-outcomes-bank.html">Watershed Outcomes Bank</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="documentsDropdown">
+                                Documents
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="documents.html#charter">Charter</a></li>
+                                <li><a class="dropdown-item" href="documents.html#metrics-proposal">Metrics Proposal</a></li>
+                                <li><a class="dropdown-item" href="documents.html#history">History</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -39,11 +155,11 @@
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Your Favorite Place for Free Bootstrap Themes</h1>
+                        <h1 class="text-white font-weight-bold">HEALTHY ELDORADO LANDSCAPE PARTNERSHIP</h1>
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+                        <p class="text-white-75 mb-5">Creating a Resilient Forest Landscape with Partners through the Healthy Eldorado Landscape Partnership (HELP).</p>
                         <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
                     </div>
                 </div>
@@ -54,52 +170,52 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
+                        <h2 class="text-white mt-0">About</h2>
                         <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+                        <p class="text-white-75 mb-4">The Healthy Eldorado Partnership Strategy is intended to buttress the Eldorado National Forest Resilience Strategy while
+                        taking aim at the impediments standing in the way of landscape-scale restoration. In addition to leveraging financial
+                        resources, HELP will address constraints surrounding workforce attrition, sawmill and biomass utilization operational
+                        capacity, planning resources, and acquisition of the physical equipment to make the transformational changes needed to
+                        build an ecologically and economically resilient landscape through a sustainable proactive forest and watershed
+                        management. <br><br>Check out this video on Restoring Landscape Resilience in Crystal Basin</p>
+                        <div class="text-center my-4">
+                            <iframe width="400" height="225" src="https://www.youtube.com/embed/W-cNA2pgKWo" title="Restoring Landscape Resilience in Crystal Basin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 100%;"></iframe>
+                        </div>
+                        <a class="btn btn-light btn-xl" href="#partners">Partners</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Services-->
-        <section class="page-section" id="services">
+        <!-- Partners-->
+        <section class="page-section" id="partners">
             <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
+                <h2 class="text-center mt-0">Partners</h2>
                 <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center align-items-center">
                     <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Sturdy Themes</h3>
-                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                        <div class="partner-container">
+                            <img src="assets/logos/partner1.png" alt="Partner 1 Logo" class="partner-logo-display">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Up to Date</h3>
-                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                        <div class="partner-container">
+                            <img src="assets/logos/partner2.png" alt="Partner 2 Logo" class="partner-logo-display">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Ready to Publish</h3>
-                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                        <div class="partner-container">
+                            <img src="assets/logos/partner3.png" alt="Partner 3 Logo" class="partner-logo-display">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Made with Love</h3>
-                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        <div class="partner-container">
+                            <img src="assets/logos/partner4.png" alt="Partner 4 Logo" class="partner-logo-display">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Portfolio-->
+        <!-- Projects-->
         <div id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row g-0">
@@ -174,77 +290,14 @@
                     <div class="col-lg-8 col-xl-6 text-center">
                         <h2 class="mt-0">Let's Get In Touch!</h2>
                         <hr class="divider" />
-                        <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
+                        <p class="text-muted mb-5">Contact the Partnership Coordinator at the Eldorado National Forest to get involved or begin attending meetings!</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2025 - HELP</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -252,10 +305,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
