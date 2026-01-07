@@ -1,3 +1,19 @@
+/* Custom: Make meadow-resto.png 30% larger and centered */
+.meadow-resto-large {
+  width: 130%;
+  max-width: 130%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.meadow-resto-caption {
+  font-size: 8pt;
+  color: #888;
+  text-align: center;
+  margin-top: 0.5rem;
+}
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
